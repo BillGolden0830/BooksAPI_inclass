@@ -1,3 +1,32 @@
 <resources>
     <string name="app_name">BooksAPI</string>
+    <string name="book_search">Book Search</string>
+    <string-array name="sp_filter">
+        <item>
+            ebooks
+        </item>
+       <item>
+           free-ebooks
+        </item>
+        <item>
+            full
+        </item>
+        <item>
+            paid-ebooks
+        </item>
+        <item>
+            partial
+        </item>
+    </string-array>
+    <string-array name="sp_book_type">
+        <item>
+            all
+        </item>
+        <item>
+            books
+        </item>
+        <item>
+            magazines
+        </item>
+    </string-array>
 </resources>
