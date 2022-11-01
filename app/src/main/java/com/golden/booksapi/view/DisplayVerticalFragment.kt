@@ -11,6 +11,8 @@ import com.golden.booksapi.databinding.DisplayFragmentLayoutBinding
 import com.golden.booksapi.model.remote.BookInfo
 import com.golden.booksapi.model.remote.BookResponse
 import com.golden.booksapi.view.adapter.BookAdapter
+import parseBookList
+
 
 class DisplayVerticalFragment: Fragment() {
 
@@ -59,21 +61,13 @@ class DisplayVerticalFragment: Fragment() {
     }
 
     private fun parseListBo0okInfo(dataSet: BookResponse): List<BookInfo> {
-        return dataSet.items.map { bookItem ->
-            BookInfo(
-                bookItem.volumeInfo.title,
-                bookItem.volumeInfo.subtitle,
-                bookItem.volumeInfo.authors,
-                bookItem.volumeInfo.description,
-                bookItem.volumeInfo.publishedDate,
-                bookItem.volumeInfo.imageLinks
-            )
+        return dataSet.items.parseBookList()
+
         }
 
 
 
         fun navigateDetails(bookInfo: BookInfo) {
 
-        }
     }
 }

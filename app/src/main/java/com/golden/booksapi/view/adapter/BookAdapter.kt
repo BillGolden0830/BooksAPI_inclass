@@ -19,6 +19,8 @@ class BookAdapter(private val dataSet: List<BookInfo>,
                     openDetails(bookItem)
                 }
                 binding.tvBookTitle.text = bookItem.title
+                binding.tvSubtitle.text = bookItem.subtitle
+                
                 binding.tvBookPublished.text = bookItem.publishedDate
 
 
